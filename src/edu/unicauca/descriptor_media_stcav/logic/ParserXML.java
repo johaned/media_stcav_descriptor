@@ -40,6 +40,7 @@ import de.odysseus.staxon.xml.util.PrettyXMLEventWriter;
 import de.odysseus.staxon.xml.util.PrettyXMLStreamWriter;
 import edu.unicauca.descriptor_media_stcav.model.mbean.MyMBeanAttributeInfo;
 import edu.unicauca.descriptor_media_stcav.model.mbean.MyMBeanInfo;
+import edu.unicauca.descriptor_media_stcav.model.mbean.MyManRes;
 import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.Attr;
 import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.ManRes;
 import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.Mcratr;
@@ -140,17 +141,19 @@ public class ParserXML {
 		}		
 	}
 	
-	public static void document_to_single_xml_myMBeanInfo(List<MyMBeanInfo> mmbis) {
+
+	public static void document_to_single_xml_myMBeanInfo(List<MyManRes> mmrs) {
 		int i=0;
-		for (MyMBeanInfo mmbi : mmbis) {
+		for (MyManRes mmr : mmrs) {
 			try {
 		          Serializer serializer = new Persister();
-		          File result = new File("jmx_"+i+".xml");
-		          serializer.write(mmbi, result);
+		          File result = new File(mmr.getName()+".xml");
+		          serializer.write(mmr, result);
 		     } catch (Exception e) {
 		          e.printStackTrace();
 		     }
 			i++;			
 		}		
 	}
+	
 }
