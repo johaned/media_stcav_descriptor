@@ -1,0 +1,17 @@
+<myMBeanInfo className="mbean.MyDynamicMBean" description="Establece la referencia cruzada entre el servidor de usuarios y el de contenidos multimedia">
+   <attributes length="4">
+      <myMBeanAttributeInfo name="UserReferenceCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de referencia cruzada para una sesion de usuario" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="CommunityReferenceCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de referencia cruzada para una sesion de comunidad" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="UserReferenceTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada para la sesison de usuario" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="CommunityReferenceTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada ara la sesion de comunidad" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+   </attributes>
+   <notifications length="0"/>
+</myMBeanInfo>

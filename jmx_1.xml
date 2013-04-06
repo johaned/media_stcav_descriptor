@@ -1,0 +1,41 @@
+<myMBeanInfo className="mbean.MyDynamicMBean" description="Gestiona los procesos del historial de usuarios">
+   <attributes length="12">
+      <myMBeanAttributeInfo name="UserContentCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de contenidos del usuario" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentPlayCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de reproduccion de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentUpgradeCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de edicion de metainfo de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentInfoCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de visualizacion de metainfo de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentSearchingCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de busqueda de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentProcessProgressCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de estado de adaptacion del contenido" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="UserContentTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de contenidos del usuario" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentPlayTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de reproduccion de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentUpgradeTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de edicion de metainfo de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentInfoTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de metainfo de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentSearchingTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de busqueda de contenidos" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+      <myMBeanAttributeInfo name="ContentProcessProgressTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de estado de adaptacion del contenido" isReadable="true" isWritable="false" isIs="false">
+         <value>0</value>
+      </myMBeanAttributeInfo>
+   </attributes>
+   <notifications length="0"/>
+</myMBeanInfo>
