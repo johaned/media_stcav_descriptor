@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import javax.crypto.spec.DESedeKeySpec;
 import javax.xml.stream.FactoryConfigurationError;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLEventWriter;
@@ -146,6 +147,7 @@ public class ParserXML {
 		int i=0;
 		for (MyManRes mmr : mmrs) {
 			try {
+				
 		          Serializer serializer = new Persister();
 		          File result = new File(mmr.getName()+".xml");
 		          serializer.write(mmr, result);
