@@ -5,6 +5,7 @@ import java.util.List;
 
 import edu.unicauca.descriptor_media_stcav.logic.ContentProcessorGenerator;
 import edu.unicauca.descriptor_media_stcav.logic.ContentProcessorServerGenerator;
+import edu.unicauca.descriptor_media_stcav.logic.EvaProcessorServerGenerator;
 import edu.unicauca.descriptor_media_stcav.logic.ParserXML;
 import edu.unicauca.descriptor_media_stcav.logic.SkeletonProcessor;
 import edu.unicauca.descriptor_media_stcav.miscellaneus.Log;
@@ -21,8 +22,12 @@ public class Main {
 		TimeOfLife tol = new TimeOfLife();
 		tol.set_home_time(System.currentTimeMillis());
 		ManRes contentProcessorServer = ContentProcessorServerGenerator.do_create_man_res();
+		ManRes evaProcessorServer = EvaProcessorServerGenerator.do_create_man_res();
 		List<MyManRes> mmrs = new ArrayList<MyManRes>();
 		mmrs.add(SkeletonProcessor.do_ManRes_to_myManRes(contentProcessorServer));
+		ParserXML.document_to_single_xml_myMBeanInfo(mmrs);
+		mmrs.clear();
+		mmrs.add(SkeletonProcessor.do_ManRes_to_myManRes(evaProcessorServer));
 		ParserXML.document_to_single_xml_myMBeanInfo(mmrs);
 		tol.set_end_time(System.currentTimeMillis());
 		Log.print("Tiempo de proceso: "+tol.get_tot_());
