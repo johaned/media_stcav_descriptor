@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.unicauca.descriptor_media_stcav.logic.ContentProcessorGenerator;
+import edu.unicauca.descriptor_media_stcav.logic.ContentProcessorServerGenerator;
 import edu.unicauca.descriptor_media_stcav.logic.ParserXML;
 import edu.unicauca.descriptor_media_stcav.logic.SkeletonProcessor;
 import edu.unicauca.descriptor_media_stcav.miscellaneus.Log;
@@ -19,7 +20,7 @@ public class Main {
 	public static void main(String[] args) {
 		TimeOfLife tol = new TimeOfLife();
 		tol.set_home_time(System.currentTimeMillis());
-		ManRes contentProcessorServer = ContentProcessorGenerator.do_create_man_res();
+		ManRes contentProcessorServer = ContentProcessorServerGenerator.do_create_man_res();
 		List<MyManRes> mmrs = new ArrayList<MyManRes>();
 		mmrs.add(SkeletonProcessor.do_ManRes_to_myManRes(contentProcessorServer));
 		ParserXML.document_to_single_xml_myMBeanInfo(mmrs);

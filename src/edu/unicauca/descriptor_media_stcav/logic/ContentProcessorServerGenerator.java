@@ -10,7 +10,7 @@ import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.ManRes;
 import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.Mcratr;
 import edu.unicauca.descriptor_media_stcav.model.mongoskeleton.Notif;
 
-public class ContentProcessorGenerator {
+public class ContentProcessorServerGenerator {
 
 	public static ManRes do_create_man_res() {
 		ManRes mr = new ManRes();
@@ -53,7 +53,7 @@ public class ContentProcessorGenerator {
 		ma.setType("simple");
 		ma.setDescr("Gestiona los procesos del historial de usuarios");
 		ma.setRefProt(refprot + "." + ma.getId());
-		ma.setAttr(do_create_attrs_ContentRecord(ma.getRefProt()));
+		ma.setAttr(do_create_attrs_ContentHistory(ma.getRefProt()));
 		ma.setNotif(new ArrayList<Notif>());
 		mas.add(ma);
 
@@ -85,65 +85,18 @@ public class ContentProcessorGenerator {
 	private static List<Attr> do_create_attrs_ContentEditing(String refprot) {
 		List<Attr> as = new ArrayList<Attr>();
 		Attr attr = new Attr();
-		// UserContentsCounts
+		// VideoEditedSavingCounts
+		attr = new Attr();
 		attr.setId(1);
-		attr.setName("UserContentCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de historial de contenidos de usuario");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentSearchingCounts
-		attr = new Attr();
-		attr.setId(2);
-		attr.setName("ContentSearchingCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de busqueda de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentPlayCounts
-		attr = new Attr();
-		attr.setId(3);
-		attr.setName("ContentPlayCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de reproduccion de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// SaveEditionCounts
-		attr = new Attr();
-		attr.setId(4);
-		attr.setName("SaveEditionCounts");
+		attr.setName("VideoEditedSavingCounts");
 		attr.setDataType("java.lang.Integer");
 		attr.setDescr("Numero de veces que se accede al servicio de guardar la edicion de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// UserContentsTime
+		// VideoEditedSavingTime
 		attr = new Attr();
-		attr.setId(5);
-		attr.setName("UserContentTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de historial de contenidos de usuario");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentSearchingTime
-		attr = new Attr();
-		attr.setId(6);
-		attr.setName("ContentSearchingTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de busqueda de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentPlayTime
-		attr = new Attr();
-		attr.setId(7);
-		attr.setName("ContentPlayTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de reproduccion de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// SaveEditionTime
-		attr = new Attr();
-		attr.setId(8);
-		attr.setName("SaveEditionTime");
+		attr.setId(2);
+		attr.setName("VideoEditedSavingTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de guardar la edicion de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
@@ -162,41 +115,17 @@ public class ContentProcessorGenerator {
 		attr.setDescr("Numero de veces que se accede al servicio de carga de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// TagsGettingCounts
-		attr = new Attr();
-		attr.setId(2);
-		attr.setName("TagsGettingCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de consulta de etiquetas");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
 		// ContentLabelingCounts
 		attr = new Attr();
-		attr.setId(3);
+		attr.setId(2);
 		attr.setName("ContentLabelingCounts");
 		attr.setDataType("java.lang.Integer");
 		attr.setDescr("Numero de veces que se accede al servicio de rotulacion de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// MediaStateAdaptingCounts
-		attr = new Attr();
-		attr.setId(4);
-		attr.setName("MediaStateAdaptingCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de revision de estado de adaptacion");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentLabelGettingCounts
-		attr = new Attr();
-		attr.setId(5);
-		attr.setName("ContentLabelGettingCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de obtencion de informacion del contenido cargado");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
 		// ContentLabelEditCounts
 		attr = new Attr();
-		attr.setId(6);
+		attr.setId(3);
 		attr.setName("ContentLabelEditCounts");
 		attr.setDataType("java.lang.Integer");
 		attr.setDescr("Numero de veces que se accede al servicio de edicion de informacion del contenido cargado");
@@ -204,47 +133,23 @@ public class ContentProcessorGenerator {
 		as.add(attr);
 		// ContentUploadingTime
 		attr = new Attr();
-		attr.setId(7);
+		attr.setId(4);
 		attr.setName("ContentUploadingTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de carga de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// TagsGettingTime
-		attr = new Attr();
-		attr.setId(8);
-		attr.setName("TagsGettingTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de consulta de etiquetas");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
 		// ContentLabelingTime
 		attr = new Attr();
-		attr.setId(9);
+		attr.setId(5);
 		attr.setName("ContentLabelingTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de rotulacion de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// MediaStateAdaptingTime
-		attr = new Attr();
-		attr.setId(10);
-		attr.setName("MediaStateAdaptingTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de estado de adaptacion");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentLabelGettingTime
-		attr = new Attr();
-		attr.setId(11);
-		attr.setName("ContentLabelGettingTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de informacion del contenido cargado");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
 		// ContentLabelEditTime
 		attr = new Attr();
-		attr.setId(12);
+		attr.setId(6);
 		attr.setName("ContentLabelEditTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de informacion del contenido cargado");
@@ -253,7 +158,7 @@ public class ContentProcessorGenerator {
 		return as;
 	}
 
-	private static List<Attr> do_create_attrs_ContentRecord(String refprot) {
+	private static List<Attr> do_create_attrs_ContentHistory(String refprot) {
 		List<Attr> as = new ArrayList<Attr>();
 		Attr attr = new Attr();
 		// UserContentCounts
@@ -287,25 +192,9 @@ public class ContentProcessorGenerator {
 		attr.setDescr("Numero de veces que se accede al servicio de visualizacion de metainfo de contenidos");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
-		// ContentSearchingCounts
-		attr = new Attr();
-		attr.setId(5);
-		attr.setName("ContentSearchingCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de busqueda de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentProcessProgressCounts
-		attr = new Attr();
-		attr.setId(6);
-		attr.setName("ContentProcessProgressCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de estado de adaptacion del contenido");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
 		// UserContentTime
 		attr = new Attr();
-		attr.setId(7);
+		attr.setId(5);
 		attr.setName("UserContentTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de contenidos del usuario");
@@ -313,7 +202,7 @@ public class ContentProcessorGenerator {
 		as.add(attr);
 		// ContentPlayTime
 		attr = new Attr();
-		attr.setId(8);
+		attr.setId(6);
 		attr.setName("ContentPlayTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de reproduccion de contenidos");
@@ -321,7 +210,7 @@ public class ContentProcessorGenerator {
 		as.add(attr);
 		// ContentUpgradeTime
 		attr = new Attr();
-		attr.setId(9);
+		attr.setId(7);
 		attr.setName("ContentUpgradeTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de edicion de metainfo de contenidos");
@@ -329,26 +218,10 @@ public class ContentProcessorGenerator {
 		as.add(attr);
 		// ContentInfoTime
 		attr = new Attr();
-		attr.setId(10);
+		attr.setId(8);
 		attr.setName("ContentInfoTime");
 		attr.setDataType("java.lang.Long");
 		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de metainfo de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentSearchingTime
-		attr = new Attr();
-		attr.setId(11);
-		attr.setName("ContentSearchingTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de busqueda de contenidos");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// ContentProcessPorgressTime
-		attr = new Attr();
-		attr.setId(12);
-		attr.setName("ContentProcessProgressTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de estado de adaptacion del contenido");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
 
