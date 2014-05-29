@@ -1,5 +1,5 @@
 <myManRes name="EvaProcessorServer" domain="MediaServer" description="Recurso gestionable encargado de gestionar el procesamiento de los contenidos multimedia del STCAV" referenceProtocol="1.3">
-   <macroAttributes length="4">
+   <macroAttributes length="13">
       <myMBeanInfo className="mbean.MyDynamicMBean" name="ResizeVideoHD" description="Proceso de redimensionamiento y transcodificacion a MPEG4 720p" referenceProtocol="1.3.1" type="composite">
          <attributes length="6">
             <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.1.1" isReadable="true" isWritable="false" isIs="false">
@@ -69,7 +69,7 @@
          </attributes>
          <notifications length="0"/>
       </myMBeanInfo>
-      <myMBeanInfo className="mbean.MyDynamicMBean" name="CutVideoHd" description="Fragmenta un video desde un punto inicial a un punto final respecto del video original" referenceProtocol="1.3.4" type="simple">
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="CutVideoHd" description="Fragmenta un video desde un punto inicial a un punto final respecto del video original" referenceProtocol="1.3.4" type="composite">
          <attributes length="6">
             <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.4.1" isReadable="true" isWritable="false" isIs="false">
                <value>0</value>
@@ -87,6 +87,213 @@
                <value>0</value>
             </myMBeanAttributeInfo>
             <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.4.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="CreateVideoFromImage" description="Crea un video con una duración especifica desde una imagen" referenceProtocol="1.3.5" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.5.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.5.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.5.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.5.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.5.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.5.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="CreateImageFromVideo" description="Captura una imagen en un tiempo especifico desde un video" referenceProtocol="1.3.6" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.6.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.6.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.6.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.6.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.6.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.6.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InsertSilenceToVideo" description="Inserta silencio al canal de audio del video" referenceProtocol="1.3.7" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.7.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.7.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.7.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.7.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.7.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.7.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InsertTextToVideo" description="Inserta un texto especifico al video" referenceProtocol="1.3.8" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.8.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.8.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.8.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.8.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.8.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.8.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InsertTextToVideoInTime" description="Inserta un texto especifico al video en un intervalo de tiempo especifico" referenceProtocol="1.3.9" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.9.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.9.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.9.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.9.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.9.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.9.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InsertTextFromFileToVideo" description="Inserta un texto especifico al video desde un archivo" referenceProtocol="1.3.10" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.10.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.10.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.10.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.10.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.10.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.10.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InsertTextFromFileToVideoInTime" description="Inserta un texto especifico al video en un intervalo de tiempo especifico desde un archivo" referenceProtocol="1.3.11" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.11.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.11.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.11.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.11.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.11.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.11.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="DoFadeToVideo" description="Inserta un efecto de desvanecimiento al video" referenceProtocol="1.3.12" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.12.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.12.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.12.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.12.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.12.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.12.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="DoMergeVideosX264" description="Concatena una secuencia de videos con codificacion h264" referenceProtocol="1.3.13" type="composite">
+         <attributes length="6">
+            <myMBeanAttributeInfo name="VCodec" type="java.lang.String" description="Codificacion del video" referenceProtocol="1.3.13.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ACodec" type="java.lang.String" description="Codificacion de audio" referenceProtocol="1.3.13.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Duration" type="java.lang.Integer" description="tiempo en segundos que dura el contenido multimedia" referenceProtocol="1.3.13.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProcessDuration" type="java.lang.Integer" description="tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia" referenceProtocol="1.3.13.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Bitrate" type="java.lang.Integer" description="tasa de bits del video del contenido multimedia" referenceProtocol="1.3.13.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="Resolution" type="java.lang.String" description="Resolucion del video en formato: ppxpp" referenceProtocol="1.3.13.6" isReadable="true" isWritable="false" isIs="false">
                <value>0</value>
             </myMBeanAttributeInfo>
          </attributes>

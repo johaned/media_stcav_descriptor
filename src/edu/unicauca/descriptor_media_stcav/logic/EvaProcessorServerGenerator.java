@@ -72,8 +72,107 @@ public class EvaProcessorServerGenerator {
 		ma = new Mcratr();
 		ma.setId(4);
 		ma.setName("CutVideoHd");
-		ma.setType("simple");
+		ma.setType("composite");
 		ma.setDescr("Fragmenta un video desde un punto inicial a un punto final respecto del video original");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute CreateVideoFromImage
+		ma = new Mcratr();
+		ma.setId(5);
+		ma.setName("CreateVideoFromImage");
+		ma.setType("composite");
+		ma.setDescr("Crea un video con una duración especifica desde una imagen");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute CreateImageFromVideo
+		ma = new Mcratr();
+		ma.setId(6);
+		ma.setName("CreateImageFromVideo");
+		ma.setType("composite");
+		ma.setDescr("Captura una imagen en un tiempo especifico desde un video");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute InsertSilenceToVideo
+		ma = new Mcratr();
+		ma.setId(7);
+		ma.setName("InsertSilenceToVideo");
+		ma.setType("composite");
+		ma.setDescr("Inserta silencio al canal de audio del video");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute InsertTextToVideo
+		ma = new Mcratr();
+		ma.setId(8);
+		ma.setName("InsertTextToVideo");
+		ma.setType("composite");
+		ma.setDescr("Inserta un texto especifico al video");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute InsertTextToVideoInTime
+		ma = new Mcratr();
+		ma.setId(9);
+		ma.setName("InsertTextToVideoInTime");
+		ma.setType("composite");
+		ma.setDescr("Inserta un texto especifico al video en un intervalo de tiempo especifico");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute InsertTexFromFiletToVideo
+		ma = new Mcratr();
+		ma.setId(10);
+		ma.setName("InsertTextFromFileToVideo");
+		ma.setType("composite");
+		ma.setDescr("Inserta un texto especifico al video desde un archivo");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute InsertTextFromFileToVideoInTime
+		ma = new Mcratr();
+		ma.setId(11);
+		ma.setName("InsertTextFromFileToVideoInTime");
+		ma.setType("composite");
+		ma.setDescr("Inserta un texto especifico al video en un intervalo de tiempo especifico desde un archivo");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute DoFadeToVideo
+		ma = new Mcratr();
+		ma.setId(12);
+		ma.setName("DoFadeToVideo");
+		ma.setType("composite");
+		ma.setDescr("Inserta un efecto de desvanecimiento al video");
+		ma.setRefProt(refprot + "." + ma.getId());
+		ma.setAttr(do_create_attrs(ma.getRefProt()));
+		ma.setNotif(new ArrayList<Notif>());
+		mas.add(ma);
+
+		// MacroAttribute DoMergeVideosX264
+		ma = new Mcratr();
+		ma.setId(13);
+		ma.setName("DoMergeVideosX264");
+		ma.setType("composite");
+		ma.setDescr("Concatena una secuencia de videos con codificacion h264");
 		ma.setRefProt(refprot + "." + ma.getId());
 		ma.setAttr(do_create_attrs(ma.getRefProt()));
 		ma.setNotif(new ArrayList<Notif>());
@@ -81,7 +180,7 @@ public class EvaProcessorServerGenerator {
 
 		return mas;
 	}
-	
+
 	private static List<Attr> do_create_attrs(String refprot) {
 		List<Attr> as = new ArrayList<Attr>();
 		Attr attr = new Attr();
