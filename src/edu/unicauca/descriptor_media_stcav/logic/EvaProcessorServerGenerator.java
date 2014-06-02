@@ -211,7 +211,7 @@ public class EvaProcessorServerGenerator {
 		attr = new Attr();
 		attr.setId(4);
 		attr.setName("ProcessDuration");
-		attr.setDataType("java.lang.Integer");
+		attr.setDataType("java.lang.Double");
 		attr.setDescr("tiempo en segundos que dura el proceso de transformacion asociado al contenido multimedia");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);

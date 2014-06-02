@@ -1,17 +1,11 @@
 <myManRes name="ContentProcessorServer" domain="MediaServer" description="Recurso gestionable encargado de gestionar los contenidos multimedia atomicos del STCAV" referenceProtocol="1.1">
    <macroAttributes length="4">
       <myMBeanInfo className="mbean.MyDynamicMBean" name="ReferenceSession" description="Establece la referencia cruzada entre el servidor de usuarios y el de contenidos multimedia" referenceProtocol="1.1.1" type="simple">
-         <attributes length="4">
-            <myMBeanAttributeInfo name="UserReferenceCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de referencia cruzada para una sesion de usuario" referenceProtocol="1.1.1.1" isReadable="true" isWritable="false" isIs="false">
+         <attributes length="2">
+            <myMBeanAttributeInfo name="CrossedReferenceCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de referencia cruzada de sesion" referenceProtocol="1.1.1.1" isReadable="true" isWritable="false" isIs="false">
                <value>0</value>
             </myMBeanAttributeInfo>
-            <myMBeanAttributeInfo name="CommunityReferenceCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de referencia cruzada para una sesion de comunidad" referenceProtocol="1.1.1.2" isReadable="true" isWritable="false" isIs="false">
-               <value>0</value>
-            </myMBeanAttributeInfo>
-            <myMBeanAttributeInfo name="UserReferenceTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada para la sesison de usuario" referenceProtocol="1.1.1.1" isReadable="true" isWritable="false" isIs="false">
-               <value>0</value>
-            </myMBeanAttributeInfo>
-            <myMBeanAttributeInfo name="CommunityReferenceTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada ara la sesion de comunidad" referenceProtocol="1.1.1.2" isReadable="true" isWritable="false" isIs="false">
+            <myMBeanAttributeInfo name="CrossedReferenceTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada de sesion" referenceProtocol="1.1.1.2" isReadable="true" isWritable="false" isIs="false">
                <value>0</value>
             </myMBeanAttributeInfo>
          </attributes>

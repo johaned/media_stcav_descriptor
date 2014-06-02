@@ -233,33 +233,17 @@ public class ContentProcessorServerGenerator {
 		Attr attr = new Attr();
 		// UserReferenceCounts
 		attr.setId(1);
-		attr.setName("UserReferenceCounts");
+		attr.setName("CrossedReferenceCounts");
 		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de referencia cruzada para una sesion de usuario");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// CommunityReferenceCounts
-		attr = new Attr();
-		attr.setId(2);
-		attr.setName("CommunityReferenceCounts");
-		attr.setDataType("java.lang.Integer");
-		attr.setDescr("Numero de veces que se accede al servicio de referencia cruzada para una sesion de comunidad");
-		attr.setRefProt(refprot + "." + attr.getId());
-		as.add(attr);
-		// UserReferenceTime
-		attr = new Attr();
-		attr.setId(1);
-		attr.setName("UserReferenceTime");
-		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada para la sesison de usuario");
+		attr.setDescr("Numero de veces que se accede al servicio de referencia cruzada de sesion");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
 		// CommunityReferenceTime
 		attr = new Attr();
 		attr.setId(2);
-		attr.setName("CommunityReferenceTime");
+		attr.setName("CrossedReferenceTime");
 		attr.setDataType("java.lang.Long");
-		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada ara la sesion de comunidad");
+		attr.setDescr("tiempo en milisegundos que se demora en ejecutar el proceso de referencia cruzada de sesion");
 		attr.setRefProt(refprot + "." + attr.getId());
 		as.add(attr);
 		return as;
