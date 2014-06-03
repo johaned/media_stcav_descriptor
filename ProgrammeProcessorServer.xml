@@ -1,0 +1,73 @@
+<myManRes name="ProgrammeProcessorServer" domain="MediaServer" description="Recurso gestionable encargado de gestionar los programas interactivos del STCAV" referenceProtocol="1.2">
+   <macroAttributes length="3">
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="ProgramHistory" description="Gestiona los procesos del historial de programas" referenceProtocol="1.2.1" type="simple">
+         <attributes length="8">
+            <myMBeanAttributeInfo name="ProgramListCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de historial de programas" referenceProtocol="1.2.1.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="DeleteProgramCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de eliminacion de un programa" referenceProtocol="1.2.1.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="CreateProgramCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de creacion de programas" referenceProtocol="1.2.1.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="EditProgramCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de edicion de programas" referenceProtocol="1.2.1.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="ProgramListTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de historial de programas" referenceProtocol="1.2.1.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="DeleteProgramTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de eliminacion  de programas" referenceProtocol="1.2.1.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="CreateProgramTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de creacion de programas" referenceProtocol="1.2.1.7" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="EditProgramTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de edicion de programas" referenceProtocol="1.2.1.8" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="EventHistory" description="Gestiona los procesos del historial de eventos" referenceProtocol="1.2.2" type="simple">
+         <attributes length="8">
+            <myMBeanAttributeInfo name="EventListCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de historial de eventos" referenceProtocol="1.2.2.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="PlayEventCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de reproduccion de un evento" referenceProtocol="1.2.2.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="EditEventCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de edicion de eventos" referenceProtocol="1.2.2.3" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="DeleteEventCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de eliminacion de eventos" referenceProtocol="1.2.2.4" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="EventListTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de historial de eventos" referenceProtocol="1.2.2.5" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="PlayEventTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de reproduccion de un evento" referenceProtocol="1.2.2.6" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="EditEventTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de edicion de eventos" referenceProtocol="1.2.2.7" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="DeleteEventTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de eliminacion de eventos" referenceProtocol="1.2.2.8" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+      <myMBeanInfo className="mbean.MyDynamicMBean" name="InteractiveEvent" description="Gestiona los procesos relacionados con eventos interactivos de TD" referenceProtocol="1.2.3" type="simple">
+         <attributes length="2">
+            <myMBeanAttributeInfo name="CreateInteractiveEventCounts" type="java.lang.Integer" description="Numero de veces que se accede al servicio de creacion de un evento interactivo" referenceProtocol="1.2.3.1" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+            <myMBeanAttributeInfo name="CreateInteractiveEventTime" type="java.lang.Long" description="tiempo en milisegundos que se demora en ejecutar el proceso de un evento interactivo" referenceProtocol="1.2.3.2" isReadable="true" isWritable="false" isIs="false">
+               <value>0</value>
+            </myMBeanAttributeInfo>
+         </attributes>
+         <notifications length="0"/>
+      </myMBeanInfo>
+   </macroAttributes>
+</myManRes>
